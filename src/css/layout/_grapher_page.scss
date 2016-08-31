@@ -12,13 +12,19 @@
 
   .h1 {
     margin-top: 210px;
-    font-size:30px;
+    font-size: 24px;
+  @media (max-width: 767px){
+      font-size: 22px;
+    }
     color:#e6c288;
   }
 
   .btn {
     display: inline-block;
     margin-top: 20px;
+  @media (max-width: 767px) {
+      margin-top: 100px;
+    }
     background: $black;
     border: 1px solid #fff;
     border-radius: 100px;
@@ -35,16 +41,19 @@
 }
 
 .introduction {
-  height: 179px;
+  height: auto;
+  margin-bottom: 40px;
   font-size: 0;
   text-align: left;
   color: #7c7c7c;
 
   .l-box {
     display: inline-block;
-    width: 273px;
     height: 55px;
     border-right: 1px #eee solid;
+  @media (max-width: 767px){
+      border: none;
+    }
     padding: 20px;
     margin-top: 50px;
   }
