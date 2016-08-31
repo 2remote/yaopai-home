@@ -4,7 +4,8 @@
 ### 启动方式：
 1. 下载 WeFlow
 2. 监听该项目
-3. `src` 目录是开发目录，`dev` 目录（启动 WeFlow 后会出现）是打包目录
+3. `src` 目录是开发目录，`dev` 目录（启动 WeFlow 后会出现）是打包目录，故未同步 Git
+4. `src` 目录下的 img 目录因为图片太大，故未同步 Git
 
 ### [pure.css](http://purecss.io/)
 目前用到了 pure.css 的以下模块：
@@ -13,12 +14,12 @@
 * grid.css + responsive.css
 
 ### 代码结构
-首页 => index.html => home_page.scss
-客片 => works.html => works_page.scss
-企业 => firm.html =>  firm_page.scss
-摄影师 => grapher.html => grapher_page.scss
-活动 => activity.html => activity_page.scss
-活动详情 => activity_detail.html => activity_detail.scss
+* 首页 => index.html => home_page.scss
+* 客片 => works.html => works_page.scss
+* 企业 => firm.html =>  firm_page.scss
+* 摄影师 => grapher.html => grapher_page.scss
+* 活动 => activity.html => activity_page.scss
+* 活动详情 => activity_detail.html => activity_detail.scss
 
 public.scss 一共公共的样式，比如导航，footer
 
