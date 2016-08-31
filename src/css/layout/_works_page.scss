@@ -119,7 +119,10 @@
     width: 212px;
     height: 38px;
     position: absolute;
-    bottom: 30px;
+    bottom: 70px;
+    @media (max-width: 767px){
+      bottom: 30px;
+    }
     left: 50%;
     margin-left: -106px;
     line-height: 38px;
