@@ -1,0 +1,60 @@
+#wrapper {
+  float        : left;
+}
+
+// 图片轮播容器
+.rslides_container {
+  height: 450px;
+  position     : relative;
+  float        : left;
+
+  .rslides {
+    margin: 0 auto;
+  }
+
+  img {
+    height: 450px;
+  }
+}
+
+// 小圆点
+.rslides_tabs {
+  position  : absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -50px;
+  width     : 80px;
+  height    : 10px;
+  z-index   : 1000;
+
+  li {
+    display     : inline;
+    float       : none;
+    _float      : left;
+    *float      : left;
+    margin-right: 8px;
+  }
+
+  a {
+    text-indent          : -9999px;
+    overflow             : hidden;
+    -webkit-border-radius: 15px;
+    -moz-border-radius   : 15px;
+    border-radius        : 15px;
+    background           : #ccc;
+    background           : rgba(0,0,0, .2);
+    display              : inline-block;
+    _display             : block;
+    *display             : block;
+    -webkit-box-shadow   : inset 0 0 2px 0 rgba(0,0,0,.3);
+    -moz-box-shadow      : inset 0 0 2px 0 rgba(0,0,0,.3);
+    box-shadow           : inset 0 0 2px 0 rgba(0,0,0,.3);
+    width                : 9px;
+    height               : 9px;
+  }
+
+  .rslides_here a {
+    background: #222;
+    background: rgba(0,0,0, .8);
+  }
+}
