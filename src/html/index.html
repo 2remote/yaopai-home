@@ -1,0 +1,410 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <meta name="format-detection" content="telephone=no">
+  <title>YAOPAI</title>
+  <link rel="stylesheet" href="../css/style-pure.css" />
+  <link rel="stylesheet" href="../css/style-index.css" />
+</head>
+
+<body>
+  <!-- 导航 -->
+  <header id="header" class="container custom-menu-wrapper">
+    <div class="pure-menu custom-menu custom-menu-top">
+      <a href="#" class="logo custom-menu-brand">
+        <img src="../img/logo.png" alt="LOGO" />
+        <small class="small">全球预约摄影师平台</small>
+      </a>
+      <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+    </div>
+    <nav class="pure-menu fr pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+      <div class="custom-menu-screen"></div>
+      <ul class="pure-menu-list">
+        <li><a href="#" class="pure-menu-link">首页</a></li>
+        <li><a href="#" class="pure-menu-link">客片</a></li>
+        <li><a href="#" class="pure-menu-link">摄影师</a></li>
+        <li><a href="#" class="pure-menu-link">活动</a></li>
+        <li><a href="#" class="pure-menu-link">企业</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 全屏海报 -->
+  <div class="poster" id="poster-home"></div>
+
+  <!-- 数据展示 -->
+  <div id="data-list-box">
+    <div class="container data-list pure-g">
+      <section class="box pure-u-1-2 pure-u-md-1-4">
+        <div class="l-box">
+          <p>10,0000+
+            <br/><span>拍摄客户</span></p>
+        </div>
+      </section>
+      <section class="box pure-u-1-2 pure-u-md-1-4">
+        <div class="l-box">
+          <p>90,000+
+            <br/><span>实名认证摄影师</span></p>
+        </div>
+      </section>
+      <section class="box pure-u-1-2 pure-u-md-1-4">
+        <div class="l-box">
+          <p>72
+            <br/><span>种拍摄风格</span></p>
+        </div>
+      </section>
+      <section class="box pure-u-1-2 pure-u-md-1-4">
+        <div class="l-box">
+          <p>100+
+            <br/><span>全球城市可选</span></p>
+        </div>
+      </section>
+    </div>
+
+    <div class="slider-box container">
+      <span class="sign">热门活动</span>
+      <!-- 图片上下轮播 -->
+      <div class="slider-sway" id="slider-sway">
+        <ul class="slider">
+          <li>
+            <a href="#"><img class="pure-img" src="http://www.ffpic.com/demo/131228581643106/images/001.png" /></a>
+          </li>
+          <li>
+            <a href="#"><img class="pure-img" src="http://www.ffpic.com/demo/131228581643106/images/002.png" /></a>
+          </li>
+          <li>
+            <a href="#"><img class="pure-img" src="http://www.ffpic.com/demo/131228581643106/images/003.png" /></a>
+          </li>
+          <li>
+            <a href="#"><img class="pure-img" src="http://www.52desktop.cn/upimg/allimg/20101012/201010129452643477807.jpg" /></a>
+          </li>
+        </ul>
+        <!-- 轮播控制按钮 (不要用 ul 标签，否则会出 BUG)-->
+        <div id="btn-box" class="btn-box">
+          <span class="cur btn"></span>
+          <span class="btn"></span>
+          <span class="btn"></span>
+          <span class="btn"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- YAOPAI环球旅拍 -->
+  <div class="card-box container">
+    <header class="card-title">
+      <img src="../img/logo_black.png" alt="YAOPAI" /> 环球旅拍
+      </br>
+      <small class="small">GLOBAL TRAVEL</small>
+    </header>
+
+    <div class="card-list pure-g">
+      <section class="card pure-u-1 pure-u-md-2-3">
+        <div class="l-box l-box-img"></div>
+      </section>
+
+      <section class="card pure-u-1-2 pure-u-md-1-3">
+        <div class="l-box">
+          <img class="card-img" src="http://www.52desktop.cn/upimg/allimg/20101012/201010129452643477807.jpg" />
+          <p class="card-subtitle">[巴黎]铁塔下的浪漫</p>
+          <p class="card-text">
+            <span class="face"></span>
+            <span>Smartain</span>
+            <img class="vip" src="../img/vip.png" alt="认证" />
+          </p>
+        </div>
+      </section>
+
+      <section class="card pure-u-1-2 pure-u-md-1-3">
+        <div class="l-box">
+          <img class="card-img" src="http://www.52desktop.cn/upimg/allimg/20101012/201010129452643477807.jpg" />
+          <p class="card-subtitle">[巴黎]铁塔下的浪漫</p>
+          <p class="card-text">
+            <span class="face"></span>
+            <span>Smartain</span>
+            <img class="vip" src="../img/vip.png" alt="认证" />
+          </p>
+        </div>
+      </section>
+
+      <section class="card pure-u-1-2 pure-u-md-1-3">
+        <div class="l-box">
+          <img class="card-img" src="http://www.52desktop.cn/upimg/allimg/20101012/201010129452643477807.jpg" />
+          <p class="card-subtitle">[巴黎]铁塔下的浪漫</p>
+          <p class="card-text">
+            <span class="face"></span>
+            <span>Smartain</span>
+            <img class="vip" src="../img/vip.png" alt="认证" />
+          </p>
+        </div>
+      </section>
+
+      <section class="card pure-u-1-2 pure-u-md-1-3">
+        <div class="l-box">
+          <img class="card-img" src="http://www.52desktop.cn/upimg/allimg/20101012/201010129452643477807.jpg" />
+          <p class="card-subtitle">[巴黎]铁塔下的浪漫</p>
+          <p class="card-text">
+            <span class="face"></span>
+            <span>Smartain</span>
+            <img class="vip" src="../img/vip.png" alt="认证" />
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <a class="card-footer" href="#">查看更多&#62;</a>
+  </div>
+
+
+
+  <!-- YAOPAI个人写真 -->
+  <div class="gray-box">
+    <div class="card-box container">
+      <header class="card-title">
+        <img src="../img/logo_black.png" alt="YAOPAI" /> 个人写真
+        </br>
+        <small class="small">PERSONAL ALBUM</small>
+      </header>
+
+      <div class="card-list pure-g clearfix">
+        <section class="card pure-u-1 pure-u-md-2-3">
+          <div class="l-box l-box-img"></div>
+        </section>
+
+        <section class="card pure-u-1-2 pure-u-md-1-3">
+          <div class="l-box">
+            <img class="card-img" src="http://www.52desktop.cn/upimg/allimg/20101012/201010129452643477807.jpg" />
+            <p class="card-subtitle">[巴黎]铁塔下的浪漫</p>
+            <p class="card-text">
+              <span class="face"></span>
+              <span>Smartain</span>
+              <img class="vip" src="../img/vip.png" alt="认证" />
+            </p>
+          </div>
+        </section>
+
+        <section class="card pure-u-1-2 pure-u-md-1-3">
+          <div class="l-box">
+            <img class="card-img" src="http://www.52desktop.cn/upimg/allimg/20101012/201010129452643477807.jpg" />
+            <p class="card-subtitle">[巴黎]铁塔下的浪漫</p>
+            <p class="card-text">
+              <span class="face"></span>
+              <span>Smartain</span>
+              <img class="vip" src="../img/vip.png" alt="认证" />
+            </p>
+          </div>
+        </section>
+
+        <section class="card pure-u-1-2 pure-u-md-1-3">
+          <div class="l-box">
+            <img class="card-img" src="http://www.52desktop.cn/upimg/allimg/20101012/201010129452643477807.jpg" />
+            <p class="card-subtitle">[巴黎]铁塔下的浪漫</p>
+            <p class="card-text">
+              <span class="face"></span>
+              <span>Smartain</span>
+              <img class="vip" src="../img/vip.png" alt="认证" />
+            </p>
+          </div>
+        </section>
+
+        <section class="card pure-u-1-2 pure-u-md-1-3">
+          <div class="l-box">
+            <img class="card-img" src="http://www.52desktop.cn/upimg/allimg/20101012/201010129452643477807.jpg" />
+            <p class="card-subtitle">[巴黎]铁塔下的浪漫</p>
+            <p class="card-text">
+              <span class="face"></span>
+              <span>Smartain</span>
+              <img class="vip" src="../img/vip.png" alt="认证" />
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <a class="card-footer" href="#">查看更多&#62;</a>
+    </div>
+  </div>
+
+
+  <!-- 人气摄影师 -->
+  <div class="grapher-info-box">
+    <div class="container pure-g">
+      <!-- 图片左右轮播 -->
+      <section class="slider-sway-2 pure-u-1 pure-u-md-2-3" id="slider-sway-2">
+        <ul class="slider">
+          <li>
+            <a href="#"><img class="pure-img" src="http://www.ffpic.com/demo/131228581643106/images/001.png" /></a>
+          </li>
+          <li>
+            <a href="#"><img class="pure-img" src="http://www.ffpic.com/demo/131228581643106/images/002.png" /></a>
+          </li>
+          <li>
+            <a href="#"><img class="pure-img" src="http://www.ffpic.com/demo/131228581643106/images/003.png" /></a>
+          </li>
+          <li>
+            <a href="#"><img class="pure-img" src="http://www.52desktop.cn/upimg/allimg/20101012/201010129452643477807.jpg" /></a>
+          </li>
+        </ul>
+        <!-- 轮播控制按钮 (不要用 ul 标签，否则会出 BUG)-->
+        <div id="btn-box-2" class="btn-box">
+          <span class="cur btn"></span>
+          <span class="btn"></span>
+          <span class="btn"></span>
+          <span class="btn"></span>
+        </div>
+      </section>
+
+      <section class="grapher-info pure-u-1 pure-u-md-1-3">
+        <span class="sign">本周人气摄影师</span><br/>
+        <span class="face"></span>
+        <p class="title"><span>郑州</span>·赛力 <img src="../img/vip.png" alt=""></p>
+        <section class="info">
+          <p class="fl"><span>25</span>&#47;订单</p>
+          <p class="fl"><span>25</span>&#47;订单</p>
+          <p class="fl"><span>25</span>&#47;订单</p>
+        </section>
+        <br/>
+        <p class="text">“一个用心对待每个用户的摄影师，用最真诚的沟通，用最美的眼睛发现客户身上的闪光点。”</p>
+        <br/><a class="btn" href="#">查看更多作品</a>
+      </section>
+    </div>
+  </div>
+
+  <!-- 一堆矩形 -->
+  <div class="advertising-list">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- 一堆矩形 -->
+  <div class="advertising-list">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+
+  <!-- 一堆矩形 -->
+  <div class="advertising-list">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- 推荐下载 APP -->
+  <div class="download-box pure-g">
+    <div class="phone pure-u-1 pure-u-md-1-2"><img src="../img/phone.png" alt="PHONE"></div>
+    <section class="download pure-u-1 pure-u-md-1-2">
+      <p class="h1">下载 APP 获得最佳体验</p>
+      极致体验2.0全新升级
+      <a href="#" class="btn">iPhone 版下载</a>
+      <span>或苹果商店搜索 YAOPAI</span>
+    </section>
+  </div>
+
+  <!-- 预约流程 -->
+  <img class="icon-list" src="../img/icon_list.png" alt="">
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="QR-box">
+      <div class="fl"><img src="../img/qr.png" alt=""></div>
+      <div class="fr">
+        <img src="../img/logo_black.png" alt="">
+        <br/>全球预约摄影师平台
+      </div>
+    </div>
+
+    <p>
+      <a href="#">关于我们</a>
+      &nbsp;&nbsp;/&nbsp;&nbsp;
+      <a href="#">拍摄流程</a>
+      &nbsp;&nbsp;/&nbsp;&nbsp;
+      <a href="#">常见问题</a>
+      &nbsp;&nbsp;/&nbsp;&nbsp;
+      <a href="#">摄影师入住</a>
+    </p>
+
+    <aside>客服电话：<span>400-22223333</span>（工作日上午：9:00 - 12:00）</aside>
+  </footer>
+
+</body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/slide_play.js"></script>
+<script>
+// 导航
+(function(window, document) {
+  document.getElementById('toggle').addEventListener('click', function(e) {
+    document.getElementById('tuckedMenu').classList.toggle('custom-menu-tucked');
+    document.getElementById('toggle').classList.toggle('x');
+  });
+})(this, this.document);
+
+$(function() {
+  function setHeightWidth() {
+      // 由于对 #poster 进行了绝对定位，故需要计算位于其下面元素的 marginTop
+    var navHeight = $('#header').height();
+    var winHeight = $(window).height() - navHeight + 'px';
+    $('#data-list-box').css({
+      marginTop: winHeight
+    });
+
+    // 计算图片左右轮播的宽度，实现响应式轮播
+    var sliderWidth = $('#slider-sway-2').width();
+    console.log(sliderWidth)
+    $('#slider-sway-2 ul li img').css({width: sliderWidth + 'px'})
+    console.log($('#slider-sway-2 ul li img').width())
+  }
+
+  setHeightWidth();
+  $(window).resize(function() {
+    setHeightWidth();
+  });
+
+  // 图片上下轮播
+  $('#slider-sway').sliderPlay({
+    speed: 500, //动画效果持续时间
+    timeout: 2000, //幻灯间隔时间
+    btnBox: 'btn-box', //按钮的容器id
+    btnCurClassName: 'cur', //当前按钮的className,
+    direction: 'up', //left , up
+    mouseEvent: 'click' //事件类型，默认是click ,hover
+  });
+
+  // 图片左右轮播
+  $('#slider-sway-2').sliderPlay({
+    speed: 500, //动画效果持续时间
+    timeout: 2000, //幻灯间隔时间
+    btnBox: 'btn-box-2', //按钮的容器id
+    btnCurClassName: 'cur', //当前按钮的className,
+    direction: 'left', //left , up
+    mouseEvent: 'click' //事件类型，默认是click ,hover
+  });
+});
+</script>
+</html>

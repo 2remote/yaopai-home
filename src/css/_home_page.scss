@@ -1,0 +1,480 @@
+// poster
+#poster-home {
+  background     : url('../img/poster_home.png') center no-repeat;
+  background-size: cover;
+}
+
+// gray-box
+#data-list-box {
+  width         : 100%;
+  height        : auto;
+  background    : $gray;
+  padding-top   : 20px;
+  padding-bottom: 50px;
+}
+
+// 数据展示
+.data-list {
+  height       : auto;
+  margin-bottom: 20px;
+  font-size    : 0;
+
+  .box {
+    height       : 190px;
+    padding-right: 10px;
+    padding-left : 10px;
+    margin       : 10px 0;
+  }
+
+  .l-box {
+    width      : 100%;
+    height     : 190px;
+    background : $white;
+    text-align : center;
+    font-family: 'PTSans-Narrow';
+    font-size  : 36px;
+    color      : $black;
+    padding-top: 50px;
+
+    span {
+      font-size: 16px;
+      color    : $dark;
+    }
+  }
+}
+
+/*
+ *  图片轮播
+ */
+.slider-box {
+  position  : relative;
+  left      : 0;
+  top       : 0;
+  padding   : 10px;
+  background: $white;
+  border    : 1px solid $black;
+
+  .sign {
+    position   : absolute;
+    left       : 0;
+    top        : 0;
+    z-index    : $z-index-highest;
+    width      : 120px;
+    height     : 40px;
+    line-height: 40px;
+    background : $black;
+    color      : $white;
+    font-size  : 16px;
+    text-align : center;
+  }
+}
+
+.slider-sway {
+  width   : 100%;
+  height  : 300px;
+  position: relative;
+  left    : 0;
+  top     : 0;
+  overflow: hidden;
+
+  .slider {
+    position: absolute;
+    height  : 300px;
+    left    : 0;
+    top     : 0;
+    z-index : $z-index-base;
+    width   : 100%;
+  }
+
+  .slider li {
+    float          : left;
+    list-style-type: none;
+    height         : 100%;
+    width          : 100%;
+  }
+
+  .slider img {
+    border: 0;
+    width : 100%;
+    height: 300px;
+  }
+
+  .btn-box {
+    position     : absolute;
+    right        : 20px;
+    bottom       : 50%;
+    margin-bottom: -35px;
+    z-index      : $z-index-high;
+    width        : 10px;
+    height       : 70px;
+
+    .btn {
+      display      : inline-block;
+      margin-bottom: 5px;
+      width        : 10px;
+      height       : 10px;
+      background   : $white;
+      border-radius: 50%;
+      border       : 1px $black solid;
+      cursor       : pointer;
+    }
+
+    .cur {
+      background: $black;
+      color     : #fff;
+    }
+  }
+}
+
+/*
+ * card-box 环球旅拍，个人写真
+ */
+.gray-box {
+  width     : 100%;
+  height    : auto;
+  background: $gray;
+}
+
+.card-box {
+  margin-top: 10px;
+  height    : auto;
+  text-align: center;
+
+  a:-webkit-any-link {
+    color: $dark;
+  }
+
+  .card-footer {
+    display      : inline-block;
+    margin-bottom: 30px;
+    color        : $dark;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .card-title {
+    padding    : 30px 0;
+    font-size  : 20px;
+    line-height: 15px;
+
+    img {
+      width : 83px;
+      height: 17px;
+    }
+
+    .small {
+      color         : $dim-dark;
+      font-family   : 'Copperplate';
+      letter-spacing: 5px;
+    }
+  }
+
+  .card-list {
+    height       : auto;
+    margin-bottom: 40px;
+    width        : 100%;
+    font-size    : 0;
+
+    .card {
+      height       : 290px;
+      padding-right: 12px;
+      font-size    : 16px;
+      margin-bottom: 10px;
+
+      &:last-child,
+      &:nth-child(2) {
+        padding: 0;
+      }
+      @media screen and (max-width: 800px) {
+        padding: 0;
+        margin : 0;
+      }
+
+      .l-box {
+        border: 1px $dim-dark solid;
+        height: 290px;
+        @media screen and (max-width: 800px) {
+          border: none;
+        }
+      }
+
+      .l-box-img {
+        border: none;
+      }
+
+      .card-subtitle {
+        padding: 10px 0;
+      }
+
+      .card-text {
+        font-size: 14px;
+        color    : $dark;
+
+        .face {
+          display       : inline-block;
+          vertical-align: middle;
+          width         : 21px;
+          height        : 21px;
+          background    : #000;
+          border-radius : 50%;
+        }
+
+        .vip {
+          width : 10px;
+          height: 10px;
+        }
+      }
+
+      .l-box-img {
+        width          : 100%;
+        height         : 290px;
+        background     : url('http://www.ffpic.com/demo/131228581643106/images/001.png') center no-repeat;
+        background-size: cover;
+      }
+
+      .card-img {
+        max-width: 100%;
+        display  : block;
+        height   : 216px;
+      }
+    }
+  }
+}
+
+/*
+ * 图片轮播，人气摄影师
+ */
+.grapher-info-box {
+  width     : 100%;
+  @media screen and (max-width: 800px) {
+    height: 1000px;
+  }
+  height    : 550px;
+  padding: 50px 0;
+  background: #F9EFDF;
+  font-size : 0;
+  margin-bottom: 64px;
+
+  .container {
+    height: 450px;
+  }
+}
+
+.grapher-info {
+  background: #fff;
+  height    : 450px;
+  text-align: center;
+
+  .sign {
+    width: 142px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    background: $black;
+    color: $white;
+    font-size: 16px;
+  }
+
+  .face {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background: #000;
+    border-radius: 50%;
+    margin: 15px;
+  }
+
+  .title {
+    font-size: 18px;
+    span { color: $dark; }
+    img {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .info {
+    margin-top: 20px;
+    width: 240px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    padding-left: 10%;
+    background: #f8eddc;
+    border-radius: 100px;
+    font-size: 12px;
+    font-family: 'PTSans-Narrow';
+
+    p {
+      width: 26%;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 18px;
+    }
+  }
+
+  .text {
+    margin-top: 20px;
+    width: 240px;
+    display: inline-block;
+    font-size: 14px;
+    color:#949494;
+  }
+
+  .btn {
+    margin-top: 40px;
+    width: 140px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid #bdbdbd;
+    line-height: 40px;
+    font-size: 16px;
+    color: #414141;
+
+    &:hover {
+      color: $white;
+      background: $black;
+    }
+  }
+}
+
+// 图片左右轮播
+.slider-sway-2 {
+  height  : 450px;
+  position: relative;
+  left    : 0;
+  top     : 0;
+  overflow: hidden;
+
+  .slider {
+    position: absolute;
+    height  : 450px;
+    left    : 0;
+    top     : 0;
+    z-index : $z-index-base;
+    width   : 100%;
+  }
+
+  .slider li {
+    /* 宽度需 JS 计算才能支持响应式 */
+    float          : left;
+    list-style-type: none;
+    height         : 450px;
+  }
+
+  .slider img {
+    border: 0;
+    width : 100%;
+    height: 450px;
+  }
+
+  .btn-box {
+    position   : absolute;
+    bottom     : 20px;
+    left       : 50%;
+    margin-left: -40px;
+    z-index    : $z-index-high;
+    width      : 80px;
+    height     : 10px;
+
+    .btn {
+      display      : inline-block;
+      margin-right : 10px;
+      width        : 10px;
+      height       : 10px;
+      display      : inline-block;
+      background   : $white;
+      border-radius: 50%;
+      border       : 1px $black solid;
+      cursor       : pointer;
+    }
+
+    .cur {
+      background: $black;
+      color     : #fff;
+    }
+  }
+}
+
+
+// 矩形列表
+//
+.advertising-list {
+  width: 1266px;
+  height: auto;
+  margin: 0 auto;
+  font-size: 0;
+
+  span {
+    display: inline-block;
+    width: 130px;
+    height: 42px;
+    background: #ccc;
+    margin-right: 12px;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// 下载 APP
+.download-box {
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding-bottom: 80px;
+  font-size: 0;
+
+  .phone {
+    text-align: center;
+    img {
+      width: 144px;
+    }
+  }
+
+
+  .download {
+    text-align: center;
+    font-size: 16px;
+    text-align: left;
+    color: $black;
+
+    .h1 {
+      font-size: 30px;
+      color: $black;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      padding-top: 20px;
+    }
+
+    a:-webkit-any-link {
+      color: $black;
+    }
+
+    .btn {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      background: #e6c288;
+      width: 175px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      color: $black;
+      font-size: 18px;
+      color: $black;
+    }
+
+    span {
+      color: $dim-dark;
+      font-size: 14px;
+    }
+  }
+}
