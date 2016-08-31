@@ -1,10 +1,17 @@
-@import "public";
+@import "lib/pure_base";
+@import "lib/pure_button";
+@import "lib/pure_grids_responsive";
 
-@import "pic_slide";
+@import "lib/variables";
+@import "lib/mixins";
+@import "lib/utilities";
 
-@import "home_page";
-@import "grapher_page";
-@import "activity_page";
-@import "activity_detail_page";
-@import "firm_page";
-@import "works_page";
+@import "layout/pic_slide"; // 图片轮播
+@import "layout/public_layout";   // 公共的布局，比如 Nav  , Footer
+
+@import "layout/home_page";
+@import "layout/grapher_page";
+@import "layout/activity_page";
+@import "layout/activity_detail_page";
+@import "layout/firm_page";
+@import "layout/works_page";
