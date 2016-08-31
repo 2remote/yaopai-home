@@ -4,7 +4,9 @@
 
 // 图片轮播容器
 .rslides_container {
-  height: 450px;
+  @media (max-width: 767px){
+    height: 300px;
+  }
   position     : relative;
   float        : left;
 
@@ -14,6 +16,9 @@
 
   img {
     height: 450px;
+    @media (max-width: 767px){
+      height: 300px;
+    }
   }
 }
 
