@@ -40,3 +40,17 @@
 ### WeFlow 的坑
 如果 sass 某一句语法写错了，正常的反馈是页面会报错，然后告诉你错在哪里。    
 但是 WeFlow 不会报错，页面正上显示，不过显示的是最后一次正确代码的样子。
+
+### pure.css 的坑
+pure.css 的网格系统没采用由传统的 `float` 布局，而是用 `inline-block` 的方式实现的（我个人比较喜欢第二种）。我们都知道 `inline-block` 有「空格」这个坑，pure.css 是这么解决的：
+![实现原理](http://ww2.sinaimg.cn/large/72f96cbagw1f7dz3tnm4gj20n00nwn25.jpg)
+
+``` html
+<div class="pure-g">
+  <div class="pure-u-1 pure-u-md-1-3"><p>Thirds</p></div>
+  <div class="pure-u-1 pure-u-md-1-3"><p>Thirds</p></div>
+  <div class="pure-u-1 pure-u-md-1-3"><p>Thirds</p></div>
+</div>
+```
+但是有一个坑就是不能给 `pure-g` 这个类加 `font-size` 样式！如果加了子元素之间就会又出现空格！
+（真是坑爹啊）
