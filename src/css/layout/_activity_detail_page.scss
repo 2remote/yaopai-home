@@ -13,12 +13,13 @@
 // 常见问题
 .question-box {
   margin-top: 40px;
+  margin-bottom: 20px;
   height    : auto;
   font-size : 0;
 }
 
 .question-list {
-  height      : auto;
+  height      : 800px;
   padding-left: 20px;
   position: relative;
   left: 0;
@@ -61,7 +62,8 @@
 }
 
 .answere-list {
-  height   : auto;
+  height   : 800px;
+  overflow: scroll;
   padding  : 0 20px;
   font-size: 16px;
 
@@ -77,6 +79,11 @@
     padding: 10px 0;
     height: auto;
     border-bottom: 1px $gray solid;
+
+    &:last-child {
+      border: none;
+      margin-bottom: 40px;
+    }
     .subtitle { margin-bottom: 10px; }
   }
 }
