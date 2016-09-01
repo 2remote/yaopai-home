@@ -6,7 +6,7 @@
   font-size:18px;
   color:#ffffff;
 
-  a:-webkit-any-link {
+  a, a:-webkit-any-link {
     color: $white;
   }
 
@@ -99,7 +99,7 @@
     }
   }
 
-  a:-webkit-any-link {
+  a, a:-webkit-any-link {
     color: $dark;
   }
   // 查看更多

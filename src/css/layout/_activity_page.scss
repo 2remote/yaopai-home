@@ -52,7 +52,7 @@
     }
   }
 
-  a:-webkit-any-link {
+  a, a:-webkit-any-link {
     color: $dark;
   }
   // 查看更多

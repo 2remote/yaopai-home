@@ -199,7 +199,7 @@
   text-align: center;
   font-size: 12px;
 
-  a:-webkit-any-link {
+  a, a:-webkit-any-link {
     color: $black;
   }
 

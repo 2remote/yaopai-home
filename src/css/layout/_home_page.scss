@@ -58,7 +58,7 @@
   height    : auto;
   text-align: center;
 
-  a:-webkit-any-link {
+  a, a:-webkit-any-link {
     color: $dark;
   }
 
@@ -320,7 +320,7 @@
       padding-top: 20px;
     }
 
-    a:-webkit-any-link {
+    a, a:-webkit-any-link {
       color: $black;
     }
 
