@@ -78,6 +78,60 @@
   }
 }
 
+.qr-box {
+  display: none;
+  position: fixed;
+  bottom: 20%;
+  right: 20px;
+  z-index: $z-index-base;
+  width: 214px;
+  height: 350px;
+  background: $white;
+  border: 1px $black solid;
+  text-align: center;
+  font-size: 12px;
+
+  .top {
+    width: 100%;
+    height: 240px;
+    padding-top: 20px;
+    background: #d4bda9;
+
+    p {
+      font-size: 20px;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 120px;
+      height: 120px;
+      background: #000;
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    padding-top: 20px;
+    color: $dark;
+
+    a,
+    a:-webkit-any-link {
+      color: $black;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 70%;
+      height: 34px;
+      margin-bottom: 10px;
+      line-height: 34px;
+      font-size: 18px;
+      border: 1px solid #3b3b3b;
+      border-radius: 5px;
+    }
+  }
+}
+
 .grapher-list {
   width        : 100%;
   height       : auto;

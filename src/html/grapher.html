@@ -68,6 +68,20 @@
       </section>
     </div>
 
+    <!--  鼠标移到摄影师封面上，显示摄影师主页二维码和 app下载链接 -->
+    <div class="qr-box hidden-xs" id="qr-box">
+      <section class="top">
+        <p>微信扫一扫</p>
+        查看我的个人主页
+        <img src="" alt="">
+      </section>
+
+      <section class="bottom">
+        <a href="#" class="btn">下载 APP</a>
+        <br/>获取更佳体验
+      </section>
+    </div>
+
     <!-- 摄影师展示 -->
     <div class="grapher-list">
       <header class="card-title">
@@ -75,10 +89,10 @@
         </br>
         <small class="small">PHOTOGRAPHER</small>
       </header>
-      <article class="card-list container pure-g">
+      <article class="card-list container pure-g" id="card-list">
         <section class="left box pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3">
           <div class="l-box">
-            <div class="cover">
+            <div class="cover aa">
               <span class="face"></span>
             </div>
             <span class="name">Smartain <img src="../img/vip.png" alt=""></span>
@@ -91,7 +105,7 @@
 
         <section class="left pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3">
           <div class="l-box">
-            <div class="cover">
+            <div class="cover bb">
               <span class="face"></span>
             </div>
             <span class="name">Smartain <img src="../img/vip.png" alt=""></span>
@@ -202,12 +216,32 @@
         marginTop: winHeight
       });
     }
-
     setHeight();
     $(window).resize(setHeight);
 
     bodyHeight = $('#body').height();
     $('body').css('height', bodyHeight);
+
+    /* 摄影师封面 onMouseover 逻辑 */
+    // 填入二维码图片路径
+    var qrList = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png'];
+    function setQrList(list) {
+      $('#card-list .cover').hover(
+        function() {
+          var index = $(this).index('#card-list .cover');
+          $('#qr-box')
+            .find('img')
+            .attr('src', list[index])
+            .end()
+            .show();
+        },
+        function() {
+          $('#qr-box').hide();
+        }
+      )
+    }
+
+    setQrList(qrList);
   });
 </script>
 
