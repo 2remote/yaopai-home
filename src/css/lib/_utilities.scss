@@ -84,10 +84,12 @@ i {
 // ```
 //
 // ```javascript
-// $('#mask').toggleClass('fade-toggle')
+// $('#mask')show().addClass('fade-toggle')
+// $('#mask')hide().removeClass('fade-toggle')
 // ```
 $menu-mask-color: rgba(0,0,0,0.5);
 .mask-transition {
+  display:          : none;
   position          : fixed;
   z-index           : $zindex-menu-mask;
   width             : 100%;

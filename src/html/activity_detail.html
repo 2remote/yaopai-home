@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../css/style-index.css" />
 </head>
 
-<body ontouchstart>
+<body>
   <article id="body">
     <div id="nav-bar">
       <header id="header" class="container custom-menu-wrapper">
@@ -48,7 +48,7 @@
 
     <div class="question-box container pure-g">
       <!-- 黑色蒙版 -->
-      <div id="mask" class="mask-transition visible-xs"></div>
+      <div id="mask" class="mask-transition"></div>
       <!-- 汉堡按钮 -->
       <a class="menu-toggle visible-xs" id="menu-toggle" herf="javascript:void(0)">
         <span class="icon-bar"></span>
@@ -161,6 +161,7 @@
   // 导航
   (function(window, document) {
     document.getElementById('toggle').addEventListener('click', function(e) {
+      console.log(1234)
       document.getElementById('tuckedMenu').classList.toggle('custom-menu-tucked');
       document.getElementById('toggle').classList.toggle('x');
     });
@@ -204,12 +205,12 @@
 
     //菜单滑动
     function showMenu() {
-      $('#mask').addClass('fade-toggle');
+      $('#mask').show().addClass('fade-toggle');
       $('#menu').addClass('slide-toggle');
     }
 
     function hideMenu() {
-      $('#mask').removeClass('fade-toggle');
+      $('#mask').hide().removeClass('fade-toggle');
       $('#menu').removeClass('slide-toggle');
     }
 
