@@ -45,14 +45,22 @@
 
 
 /*
- * card-box 环球旅拍，个人写真
+ * card-box 个人写真
  */
 .gray-box {
   width     : 100%;
   height    : auto;
   background: $gray;
+
+  // 个人写真了继承环球旅拍的样式，同时它也能写别的样式
+  .card-box-2 {
+    @extend .card-box;
+  }
 }
 
+/*
+ * card-box 环球旅拍
+ */
 .card-box {
   margin-top: 10px;
   height    : auto;
