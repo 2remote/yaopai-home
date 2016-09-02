@@ -89,7 +89,7 @@ i {
 // ```
 $menu-mask-color: rgba(0,0,0,0.5);
 .mask-transition {
-  display:          : none;
+  display           : none;
   position          : fixed;
   z-index           : $zindex-menu-mask;
   width             : 100%;
