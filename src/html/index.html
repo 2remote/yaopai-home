@@ -352,6 +352,7 @@
 </body>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/pic_slide.js"></script>
+<script src="../js/responsiveSlides.js"></script>
 <script>
   // 导航
   (function(window, document) {
@@ -375,6 +376,16 @@
     $(window).resize(function() {
       setHeightWidth();
     });
+  });
+
+  // 图片上下轮播
+  $('#slider-sway').sliderPlay({
+    speed: 500, //动画效果持续时间
+    timeout: 2000, //幻灯间隔时间
+    btnBox: 'btn-box', //按钮的容器id
+    btnCurClassName: 'cur', //当前按钮的className,
+    direction: 'up', //left , up
+    mouseEvent: 'click' //事件类型，默认是click ,hover
   });
 
 
