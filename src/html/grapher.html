@@ -68,20 +68,6 @@
       </section>
     </div>
 
-    <!--  鼠标移到摄影师封面上，显示摄影师主页二维码和 app下载链接 -->
-    <div class="qr-box hidden-xs" id="qr-box">
-      <section class="top">
-        <p>微信扫一扫</p>
-        查看我的个人主页
-        <img src="" alt="">
-      </section>
-
-      <section class="bottom">
-        <a href="#" class="btn">下载 APP</a>
-        <br/>获取更佳体验
-      </section>
-    </div>
-
     <!-- 摄影师展示 -->
     <div class="grapher-list">
       <header class="card-title">
@@ -197,6 +183,23 @@
   </article>
 
 </body>
+
+<!-- html 模板 -->
+<!--  鼠标移到摄影师封面上，显示摄影师主页二维码和 app下载链接 -->
+<script type="text/html" id="tpl_qr">
+  <div class="qr-box hidden-xs" id="qr-box">
+    <section class="top">
+      <p>微信扫一扫</p>
+      查看我的个人主页<br/>
+      <img src="" alt="">
+    </section>
+
+    <section class="bottom">
+      <a href="#" class="btn">下载 APP</a>
+      <br/>获取更佳体验
+    </section>
+  </div>
+</script>
 <script src="../js/jquery.min.js"></script>
 <script>
   // 导航
@@ -229,14 +232,20 @@
       $('#card-list .cover').hover(
         function() {
           var index = $(this).index('#card-list .cover');
+          var distance = parseInt($(this).innerWidth())
+          $(this).append($('#tpl_qr').html());
+          // 如果是第三个或者第六个元素时
+          if((index + 1) % 3  == 0) {
+            distance = '-' + parseInt($('#qr-box').innerWidth());
+          }
           $('#qr-box')
+            .css('left', distance + 'px')
             .find('img')
             .attr('src', list[index])
             .end()
-            .show();
         },
         function() {
-          $('#qr-box').hide();
+          $('#qr-box').remove();
         }
       )
     }

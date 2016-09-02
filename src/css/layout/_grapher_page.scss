@@ -79,13 +79,11 @@
 }
 
 .qr-box {
-  display: none;
-  position: fixed;
-  bottom: 20%;
-  right: 20px;
+  position: absolute;
+  top: 0;
   z-index: $z-index-base;
-  width: 214px;
-  height: 350px;
+  width: 250px;
+  height: 420px;
   background: $white;
   border: 1px $black solid;
   text-align: center;
@@ -93,7 +91,7 @@
 
   .top {
     width: 100%;
-    height: 240px;
+    height: 250px;
     padding-top: 20px;
     background: #d4bda9;
 
@@ -102,7 +100,7 @@
     }
 
     img {
-      margin-top: 20px;
+      margin-top: 30px;
       width: 120px;
       height: 120px;
       background: #000;
@@ -111,7 +109,7 @@
 
   .bottom {
     width: 100%;
-    padding-top: 20px;
+    padding-top: 40px;
     color: $dark;
 
     a,
@@ -128,6 +126,11 @@
       font-size: 18px;
       border: 1px solid #3b3b3b;
       border-radius: 5px;
+
+      &:hover {
+        color: $white;
+        background: #000;
+      }
     }
   }
 }
