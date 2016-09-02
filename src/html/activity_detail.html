@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../css/style-index.css" />
 </head>
 
-<body>
+<body ontouchstart>
   <article id="body">
     <div id="nav-bar">
       <header id="header" class="container custom-menu-wrapper">
@@ -50,7 +50,11 @@
       <!-- 黑色蒙版 -->
       <div id="mask" class="mask-transition visible-xs"></div>
       <!-- 汉堡按钮 -->
-      <a id="menu-btn" class="visible-xs" href="javascript:void(0)"><i class="phone"></i></a>
+      <a class="menu-toggle visible-xs" id="menu-toggle" herf="javascript:void(0)">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
       <!-- menu -->
       <section id="menu" class="responsive-slides visible-xs">
         <ul id="btn-a">
@@ -61,7 +65,7 @@
           <li><a href="#ques-a-4">客服电话</a></li>
         </ul>
 
-        <ul id="btn-b">  
+        <ul id="btn-b">
           <li class="question-title">不常见问题</li>
           <li><a href="#ques-b-1">不常见问题一</a></li>
           <li><a href="#ques-b-2">不常见问题二</a></li>
@@ -209,8 +213,10 @@
       $('#menu').removeClass('slide-toggle');
     }
 
-    $('#menu-btn').toggle(showMenu, hideMenu);
-
+    $('#menu-toggle').toggle(showMenu, hideMenu);
+    $('#menu-toggle').click(function() {
+      $(this).children('.icon-bar').toggleClass('icon-bar-rotate')
+    })
     $('#mask, #menu').click(hideMenu);
   });
 </script>
