@@ -2,16 +2,16 @@
 // 图片左右轮播
 
 #wrapper {
-  float        : left;
+  float: left;
 }
 
 // 图片轮播容器
 .rslides_container {
-  @media (max-width: 767px){
+  @media (max-width: 767px) {
     height: 300px;
   }
-  position     : relative;
-  float        : left;
+  position: relative;
+  float   : left;
 
   .rslides {
     margin: 0 auto;
@@ -19,7 +19,7 @@
 
   img {
     height: 450px;
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       height: 300px;
     }
   }
@@ -27,13 +27,12 @@
 
 // 小圆点
 .rslides_tabs {
-  position  : absolute;
-  bottom: 20px;
-  left: 50%;
-  margin-left: -50px;
-  width     : 80px;
-  height    : 10px;
-  z-index   : 1000;
+  position: absolute;
+  bottom  : 20px;
+  right   : 10%;
+  width   : 80px;
+  height  : 10px;
+  z-index : 1000;
 
   li {
     display     : inline;
