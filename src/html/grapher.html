@@ -226,8 +226,9 @@
     $('body').css('height', bodyHeight);
 
     /* 摄影师封面 onMouseover 逻辑 */
-    // 填入二维码图片路径
-    var qrList = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png'];
+    // 填入二维码图片相对路径
+    var qrList = ['', '', '', '', '', ''];
+    setQrList(qrList);
     function setQrList(list) {
       $('#card-list .cover').hover(
         function() {
@@ -249,7 +250,6 @@
         }
       )
     }
-    setQrList(qrList);
   });
 </script>
 
