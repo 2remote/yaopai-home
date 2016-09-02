@@ -119,10 +119,16 @@
       }
 
       .l-box {
+        display: block;
         border: 1px $dim-dark solid;
         height: 290px;
+        cursor: pointer;
         @media screen and (max-width: 800px) {
           border: none;
+        }
+
+        &:hover {
+          border: 1px $black solid;
         }
       }
 
