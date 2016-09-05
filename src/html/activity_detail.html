@@ -57,7 +57,7 @@
       </a>
       <!-- menu -->
       <section id="menu" class="responsive-slides visible-xs">
-        <ul id="btn-a">
+        <ul class="btn-a">
           <li class="question-title">常见问题</li>
           <li><a href="#ques-a-1">如何预约</a></li>
           <li><a href="#ques-a-2">如何付款</a></li>
@@ -65,7 +65,7 @@
           <li><a href="#ques-a-4">客服电话</a></li>
         </ul>
 
-        <ul id="btn-b">
+        <ul class="btn-b">
           <li class="question-title">不常见问题</li>
           <li><a href="#ques-b-1">不常见问题一</a></li>
           <li><a href="#ques-b-2">不常见问题二</a></li>
@@ -73,17 +73,17 @@
           <li><a href="#ques-b-4">不常见问题四</a></li>
         </ul>
       </section>
-
+      <!-- 问题一定要和上面的同步 -->
       <section class="question-list pure-u-1 pure-u-md-1-4 hidden-xs">
         <p class="question-title">常见问题</p>
-        <ul id="btn-a">
+        <ul class="btn-a">
           <li><a href="#ques-a-1">如何预约</a></li>
           <li><a href="#ques-a-2">如何付款</a></li>
           <li><a href="#ques-a-3">维权方式</a></li>
           <li><a href="#ques-a-4">客服电话</a></li>
         </ul>
         <p class="question-title">不常见问题</p>
-        <ul id="btn-b">
+        <ul class="btn-b">
           <li><a href="#ques-b-1">不常见问题一</a></li>
           <li><a href="#ques-b-2">不常见问题二</a></li>
           <li><a href="#ques-b-3">不常见问题三</a></li>
@@ -171,12 +171,14 @@
     // 问题切换逻辑
     var $answereList_A = $('#answere-list-a');
     var $answereList_B = $('#answere-list-b');
-    $('#btn-a').click(function() {
+    $('.btn-a').click(function() {
+      console.log(1)
       $('#answere-list-b').addClass('hidden');
       $('#answere-list-a').removeClass('hidden');
     })
 
-    $('#btn-b').click(function() {
+    $('.btn-b').click(function() {
+      console.log(1);
       $('#answere-list-a').addClass('hidden');
       $('#answere-list-b').removeClass('hidden');
     })

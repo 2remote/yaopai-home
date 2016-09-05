@@ -157,11 +157,17 @@
 
 .answere-list {
   height   : 800px;
-  overflow : scroll;
+  position: relative;
+  left: 0;
+  right: 0;
+  overflow : hidden;
   padding  : 0 20px;
   font-size: 16px;
 
   .answere-title {
+    position: absolute;
+    left: 20px;
+    top: 10px;
     height       : 50px;
     width        : 100%;
     border-bottom: 1px $gray solid;
@@ -171,7 +177,8 @@
 
   .answere {
     padding      : 10px 0;
-    height       : auto;
+    padding-top: 65px;
+    height       : 750px;
     border-bottom: 1px $gray solid;
 
     &:last-child {
