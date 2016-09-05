@@ -1,7 +1,32 @@
 // poster
+
 #poster-home {
   background     : url('../img/poster_home.png') center no-repeat;
   background-size: cover;
+
+  #sign_down {
+    position         : absolute;
+    left             : 50%;
+    margin-left      : -15px;
+    bottom           : 20px;
+    opacity          : .6;
+    -webkit-animation: down_arrow_anim .5s infinite alternate ease-out;
+    animation        : down_arrow_anim .5s infinite alternate ease-out;
+  }
+  @-webkit-keyframes down_arrow_anim {
+    to {
+      -webkit-transform: translate3d(0, 10px, 0);
+      transform        : translate3d(0, 10px, 0);
+      opacity          : 0;
+    }
+  }
+  @keyframes down_arrow_anim {
+    to {
+      -webkit-transform: translate3d(0, 10px, 0);
+      transform        : translate3d(0, 10px, 0);
+      opacity          : 0;
+    }
+  }
 }
 
 // gray-box
@@ -43,7 +68,6 @@
   }
 }
 
-
 /*
  * card-box 个人写真
  */
@@ -66,7 +90,8 @@
   height    : auto;
   text-align: center;
 
-  a, a:-webkit-any-link {
+  a,
+  a:-webkit-any-link {
     color: $dark;
   }
 
@@ -120,9 +145,9 @@
 
       .l-box {
         display: block;
-        border: 1px $dim-dark solid;
-        height: 290px;
-        cursor: pointer;
+        border : 1px $dim-dark solid;
+        height : 290px;
+        cursor : pointer;
         @media screen and (max-width: 800px) {
           border: none;
         }
@@ -179,14 +204,14 @@
  * 图片轮播，人气摄影师
  */
 .grapher-info-box {
-  width     : 100%;
+  width        : 100%;
   @media screen and (max-width: 800px) {
     height: 850px;
   }
-  height    : 550px;
-  padding: 50px 0;
-  background: #F9EFDF;
-  font-size : 0;
+  height       : 550px;
+  padding      : 50px 0;
+  background   : #F9EFDF;
+  font-size    : 0;
   margin-bottom: 64px;
 
   .container {
@@ -200,47 +225,51 @@
   text-align: center;
 
   .sign {
-    width: 142px;
-    height: 36px;
+    width      : 142px;
+    height     : 36px;
     line-height: 36px;
-    display: inline-block;
-    background: $black;
-    color: $white;
-    font-size: 16px;
+    display    : inline-block;
+    background : $black;
+    color      : $white;
+    font-size  : 16px;
   }
 
   .face {
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    background: #000;
+    width        : 100px;
+    height       : 100px;
+    display      : inline-block;
+    background   : #000;
     border-radius: 50%;
-    margin: 15px;
+    margin       : 15px;
   }
 
   .title {
     font-size: 18px;
-    span { color: $dark; }
+
+    span {
+      color: $dark;
+    }
+
     img {
-      width: 12px;
+      width : 12px;
       height: 12px;
     }
   }
 
   .info {
-    margin-top: 20px;
-    width: 240px;
-    height: 36px;
-    line-height: 36px;
-    display: inline-block;
-    padding-left: 5%;
-    background: #f8eddc;
+    margin-top   : 20px;
+    width        : 240px;
+    height       : 36px;
+    line-height  : 36px;
+    display      : inline-block;
+    padding-left : 5%;
+    background   : #f8eddc;
     border-radius: 100px;
-    font-size: 12px;
-    font-family: 'PTSans-Narrow';
+    font-size    : 12px;
+    font-family  : 'PTSans-Narrow';
 
     p {
-      width: 26%;
+      width       : 26%;
       margin-right: 10px;
     }
 
@@ -251,44 +280,43 @@
 
   .text {
     margin-top: 20px;
-    width: 240px;
-    display: inline-block;
-    font-size: 14px;
-    color:#949494;
+    width     : 240px;
+    display   : inline-block;
+    font-size : 14px;
+    color     : #949494;
   }
 
   .btn {
-    margin-top: 40px;
-    width: 140px;
-    height: 40px;
-    display: inline-block;
-    border: 1px solid #bdbdbd;
+    margin-top : 40px;
+    width      : 140px;
+    height     : 40px;
+    display    : inline-block;
+    border     : 1px solid #bdbdbd;
     line-height: 40px;
-    font-size: 16px;
-    color: #414141;
+    font-size  : 16px;
+    color      : #414141;
 
     &:hover {
-      color: $white;
+      color     : $white;
       background: $black;
     }
   }
 }
 
-
 // 矩形列表
 //
 .advertising-list {
-  width: 1266px;
-  height: auto;
-  margin: 0 auto;
+  width    : 1266px;
+  height   : auto;
+  margin   : 0 auto;
   font-size: 0;
 
   span {
-    display: inline-block;
-    width: 130px;
-    height: 42px;
-    background: #ccc;
-    margin-right: 12px;
+    display      : inline-block;
+    width        : 130px;
+    height       : 42px;
+    background   : #ccc;
+    margin-right : 12px;
     margin-bottom: 14px;
 
     &:last-child {
@@ -299,61 +327,61 @@
 
 // 下载 APP
 .download-box {
-  width: 800px;
-  @media (max-width: 767px){
+  width         : 800px;
+  @media (max-width: 767px) {
     width: 100%;
   }
-  height: 300px;
-  margin: 0 auto;
-  margin-top: 80px;
+  height        : 300px;
+  margin        : 80px auto 0;
   padding-bottom: 80px;
-  font-size: 0;
+  font-size     : 0;
 
   .phone {
     text-align: center;
+
     img {
       width: 144px;
     }
   }
 
-
   .download {
     text-align: center;
-    font-size: 16px;
+    font-size : 16px;
     text-align: left;
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       text-align: center;
     }
-    color: $black;
+    color     : $black;
 
     .h1 {
-      font-size: 30px;
-      color: $black;
+      font-size     : 30px;
+      color         : $black;
       letter-spacing: 1px;
-      margin-bottom: 15px;
-      padding-top: 20px;
+      margin-bottom : 15px;
+      padding-top   : 20px;
     }
 
-    a, a:-webkit-any-link {
+    a,
+    a:-webkit-any-link {
       color: $black;
     }
 
     .btn {
-      display: inline-block;
-      margin-top: 20px;
+      display      : inline-block;
+      margin-top   : 20px;
       margin-bottom: 10px;
-      background: #e6c288;
-      width: 175px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
-      color: $black;
-      font-size: 18px;
-      color: $black;
+      background   : #e6c288;
+      width        : 175px;
+      height       : 50px;
+      line-height  : 50px;
+      text-align   : center;
+      color        : $black;
+      font-size    : 18px;
+      color        : $black;
     }
 
     span {
-      color: $dim-dark;
+      color    : $dim-dark;
       font-size: 14px;
     }
   }
