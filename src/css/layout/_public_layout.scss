@@ -17,10 +17,18 @@
 
   .pure-menu-list {
     display: inline-block;
+    @media (max-width: 768px) {
+      width  : 100%;
+    }
+    font-size: 0;
 
     li {
       width  : 82px;
       display: inline-block;
+      font-size: 16px;
+      @media (max-width: 768px) {
+        width  : 20%;
+      }
     }
   }
 
