@@ -1,6 +1,5 @@
 node_modules
 dev
-img
 *.log
 .DS_Store
 build
