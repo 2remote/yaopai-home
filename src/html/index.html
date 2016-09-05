@@ -37,7 +37,7 @@
 
   <!-- 全屏海报 -->
   <div class="poster" id="poster-home">
-    <img src="../img/sign_down.png" alt="" id="sign_down">
+    <img src="../img/sign_down.png" alt="" id="sign-down">
   </div>
 
   <!-- 数据展示 -->
@@ -378,6 +378,10 @@
     $(window).resize(function() {
       setHeightWidth();
     });
+    var winHeight = $(window).height();
+    $('#sign-down').click(function() {
+      $('body,html').animate({scrollTop: winHeight}, 500);
+    })
   });
 
   // 图片上下轮播
