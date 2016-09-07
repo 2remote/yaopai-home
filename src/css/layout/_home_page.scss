@@ -148,6 +148,9 @@
         border : 1px $dim-dark solid;
         height : 290px;
         cursor : pointer;
+        -webkit-transition: border .2s;
+        -moz-transition: border .2s;
+        transition: border .2s;
         @media screen and (max-width: 800px) {
           border: none;
         }
