@@ -133,6 +133,11 @@
       margin-bottom: 10px;
       font-size    : 14px;
       color        : #b9b9b9;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
     }
 
     .date {
