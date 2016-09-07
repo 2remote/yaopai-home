@@ -15,9 +15,6 @@
 
 <body>
   <article id="body">
-    <!-- 导航 -->
-
-
     <!-- 全屏海报 -->
     <div class="poster" id="activity-home" style="background:url('../img/banner/activity.gif') no-repeat; background-size:cover">
       <div id="nav-bar">
@@ -147,7 +144,7 @@
     function setHeight() {
       // 由于对 #poster 进行了绝对定位，故需要计算位于其下面元素的 marginTop
       var navHeight = $('#header').height();
-      var winHeight = $(window).height() - navHeight + 30 + 'px';
+      var winHeight = $(window).height() - navHeight + 100 + 'px';
       $('.activity-list').css({
         marginTop: winHeight
       });
