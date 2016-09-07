@@ -40,12 +40,10 @@
   <div class="poster" id="firm-home"></div>
 
   <!-- 活动图片 -->
-  <div class="active" id="active">
-    <!-- 图片必须加上 pure-img 这个类，才能响应式 -->
-    <img src="../img/banner/8.jpg" class="pure-img" alt="">
-    <img src="../img/banner/9.jpg" class="pure-img" alt="">
-    <img src="../img/banner/10.jpg" class="pure-img" alt="">
-  </div>
+  <!-- 图片必须加上 pure-img 这个类，才能响应式 -->
+  <img src="../img/banner/8.jpg" class="pure-img activity-img" id="first"  alt="">
+  <img src="../img/banner/9.jpg" class="pure-img activity-img" alt="">
+  <img src="../img/banner/10.jpg" class="pure-img activity-img" id="last" alt="">
 
   <!-- 预约流程 -->
   <img class="icon-list pure-img" src="../img/icon_list.png" alt="">
@@ -90,7 +88,7 @@ $(function() {
     // 由于对 #poster 进行了绝对定位，故需要计算位于其下面元素的 marginTop
     var navHeight = $('#header').height();
     var winHeight = $(window).height() - navHeight + 'px';
-    $('#active').css({
+    $('#first').css({
       marginTop: winHeight
     });
   }
