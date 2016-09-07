@@ -103,26 +103,23 @@
       height       : 25px;
       font-size    : 18px;
 
-      @media (max-width: 767px) {
-        .fl {
-          width: 64%;
-          font-size: 16px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          word-wrap: normal;
-          word-wrap: break-word;
-          word-break: break-all;
-        }
+      @media (max-width: 2000px) {
+        .fr { font-size: 12px; }
+      }
 
-        .fr {
-          width: 35%;
-          font-size: 12px;
-        }
+      .fl {
+        width: 64%;
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+        word-wrap: break-word;
+        word-break: break-all;
       }
 
       .fr {
-        width      : 100px;
+        width      : 35%;
         height     : 25px;
         line-height: 25px;
         background : $black;
