@@ -329,6 +329,9 @@
     background-size: cover;
     margin-right   : 12px;
     margin-bottom  : 14px;
+    -webkit-transition: border .2s;
+    -moz-transition: border .2s;
+    transition: border .2s;
     border: 1px solid #eee;
     border-radius: 50%;
 

@@ -1,6 +1,5 @@
 // =============
 // 图片左右轮播
-
 #wrapper {
   float: left;
 }
@@ -49,7 +48,7 @@
     -moz-border-radius   : 15px;
     border-radius        : 15px;
     background           : #ccc;
-    background           : rgba(0,0,0, .2);
+    background           : $white;
     display              : inline-block;
     _display             : block;
     *display             : block;
@@ -61,8 +60,7 @@
   }
 
   .rslides_here a {
-    background: #222;
-    background: rgba(0,0,0, .8);
+    background: $gold;
   }
 }
 
