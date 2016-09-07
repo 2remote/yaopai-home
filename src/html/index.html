@@ -15,7 +15,7 @@
 
 <body>
   <!-- 导航 -->
-  <header id="header" class="container custom-menu-wrapper" >
+  <header id="header" class="container custom-menu-wrapper">
     <div class="pure-menu custom-menu custom-menu-top">
       <a href="#" class="logo custom-menu-brand">
         <img src="../img/logo.png" alt="LOGO" />
@@ -100,8 +100,10 @@
     </header>
 
     <div class="card-list pure-g">
-      <section class="card pure-u-1 pure-u-md-2-3">
-        <a href="#" class="l-box l-box-img" style="background : url('../img/banner/6.jpg') center no-repeat;"></a>
+      <section href="#" class="card long-img pure-u-1 pure-u-md-2-3">
+        <a class="l-box" href="#">
+          <img class="long-img pure-img" src="../img/banner/6.jpg" alt="">
+        </a>
       </section>
 
       <section class="card pure-u-1-2 pure-u-md-1-3">
@@ -157,7 +159,6 @@
   </div>
 
 
-
   <!-- YAOPAI个人写真 -->
   <div class="gray-box">
     <div class="card-box-2 container">
@@ -168,14 +169,18 @@
       </header>
 
       <div class="card-list pure-g clearfix">
-        <section class="card pure-u-1 pure-u-md-2-3">
-          <a href="#" class="l-box l-box-img" style="background : url('../img/banner/7.jpg') center no-repeat;"></a>
+        <section href="#" class="card long-img pure-u-1 pure-u-md-2-3">
+          <a class="l-box" href="#">
+            <img class="long-img pure-img" src="../img/banner/7.jpg" alt="">
+          </a>
         </section>
 
         <section class="card pure-u-1-2 pure-u-md-1-3">
           <a class="l-box" href="#">
             <img class="card-img" src="../img/pics/5.png" />
-            <p class="card-subtitle">[上海]cosplay<青蛇> </p>
+            <p class="card-subtitle">[上海]cosplay
+              <青蛇>
+            </p>
             <p class="card-text">
               <span class="face"></span>
               <span>尘墨</span>
@@ -360,7 +365,9 @@
     });
     var winHeight = $(window).height();
     $('#sign-down').click(function() {
-      $('body,html').animate({scrollTop: winHeight}, 500);
+      $('body,html').animate({
+        scrollTop: winHeight
+      }, 500);
     })
   });
 
