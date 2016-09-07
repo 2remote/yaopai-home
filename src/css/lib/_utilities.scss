@@ -20,6 +20,7 @@ body {
 }
 
 a { text-decoration: none; }
+.nav-active { color: $gold !important; }
 
 i {
   font-family              : "iconfont" !important;
@@ -84,8 +85,8 @@ i {
 // ```
 //
 // ```javascript
-// $('#mask')show().addClass('fade-toggle')
-// $('#mask')hide().removeClass('fade-toggle')
+// $('#mask').show().addClass('fade-toggle')
+// $('#mask').hide().removeClass('fade-toggle')
 // ```
 $menu-mask-color: rgba(0,0,0,0.5);
 .mask-transition {
