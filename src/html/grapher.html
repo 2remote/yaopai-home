@@ -158,7 +158,7 @@
         </section>
       </article>
 
-      <a class="card-footer" href="#">查看更多&#62;</a>
+      <a id="get-more" class="card-footer" href="javascript:void(0)">查看更多&#62;</a>
     </div>
 
     <!-- 预约流程 -->
@@ -198,7 +198,7 @@
     </section>
 
     <section class="bottom">
-      <a href="#" class="btn">下载 APP</a>
+      <a href="https://itunes.apple.com/us/app/yaopai/id1105711466?l=zh&ls=1&mt=8" class="btn">下载 APP</a>
       <br/>获取更佳体验
     </section>
   </div>
@@ -227,6 +227,16 @@
 
     bodyHeight = $('#body').height();
     $('body').css('height', bodyHeight);
+
+    // 检验浏览器版本
+    var browser = {
+      versions: function() {
+        var u = navigator.userAgent,
+          app = navigator.appVersion;
+        return { mobile: !!u.match(/AppleWebKit.*Mobile.*/)};
+      }(),
+      language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    }
 
     /* 摄影师封面 onMouseover 逻辑 */
     // 填入二维码图片相对路径
@@ -259,20 +269,21 @@
       );
 
       $('#card-list .cover').click(function() {
-        var browser = {
-          versions: function() {
-            var u = navigator.userAgent,
-              app = navigator.appVersion;
-            return { mobile: !!u.match(/AppleWebKit.*Mobile.*/)};
-          }(),
-          language: (navigator.browserLanguage || navigator.language).toLowerCase()
-        }
         if(!browser.versions.mobile) return; // 如果不是手机点击，直接返回
 
         var index = $(this).index('#card-list .cover');
         location.href = 'http://m.aiyaopai.com/#/grapherDetail/' + idList[index];
       });
     }
+
+    $("#get-more").click(function() {
+      if(browser.versions.mobile) {
+        var index = $(this).index('#card-list .cover');
+        location.href = 'http://m.aiyaopai.com/#/grapher';
+      } else {
+        $(this).html('<img width="180" height="180" src="../img/grapher/grapher_list_qr.png"><br/>请扫描二维码，查看更多摄影师')
+      }
+    })
   });
 </script>
 

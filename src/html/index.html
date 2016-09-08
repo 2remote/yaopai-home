@@ -155,7 +155,7 @@
       </section>
     </div>
 
-    <a class="card-footer" href="#">查看更多&#62;</a>
+    <a class="card-footer" href="javascript:void(0)">查看更多&#62;</a>
   </div>
 
 
@@ -226,7 +226,7 @@
         </section>
       </div>
 
-      <a class="card-footer" href="#">查看更多&#62;</a>
+      <a class="card-footer" href="javascript:(0)">查看更多&#62;</a>
     </div>
   </div>
 
@@ -265,7 +265,7 @@
         </section>
         <br/>
         <p class="text">“我很热爱摄影，并且享受乐趣”</p>
-        <br/><a class="btn" href="#">查看更多作品</a>
+        <br/><a id="get-more" class="btn" href="javascript:void(0)">查看更多作品</a>
       </section>
     </div>
   </div>
@@ -308,7 +308,7 @@
     <section class="download pure-u-1 pure-u-md-1-2">
       <p class="h1">下载 APP 获得最佳体验</p>
       极致体验2.0全新升级
-      <br/><a href="#" class="btn">iPhone 版下载</a>
+      <br/><a href="https://itunes.apple.com/us/app/yaopai/id1105711466?l=zh&ls=1&mt=8" class="btn">iPhone 版下载</a>
       <br/><span>或苹果商店搜索 YAOPAI</span>
     </section>
   </div>
@@ -393,6 +393,35 @@
     maxwidth: 800, // 最大宽度
     timeout: 3000, //图片切换的时间
   });
-</script>
 
+  // 检验浏览器版本
+  var browser = {
+    versions: function() {
+      var u = navigator.userAgent,
+        app = navigator.appVersion;
+      return { mobile: !!u.match(/AppleWebKit.*Mobile.*/)};
+    }(),
+    language: (navigator.browserLanguage || navigator.language).toLowerCase()
+  }
+
+  $(".card-footer").click(function() {
+    if(browser.versions.mobile) {
+      var index = $(this).index('#card-list .cover');
+      location.href = 'http://m.aiyaopai.com';
+    } else {
+      $(this).html('<img width="180" height="180" src="../img/grapher/work_list_qr.png"><br/>请扫描二维码，查看更多作品')
+    }
+  })
+
+  $('#get-more').click(function() {
+    if(browser.versions.mobile) {
+      var index = $(this).index('#card-list .cover');
+      location.href = 'http://m.aiyaopai.com';
+    } else {
+      $(this)
+        .css({border: 'none', fontSize: '12px', marginTop: 0, color: '#000', lineHeight: 1})
+        .html('<img width="120" height="120" src="../img/grapher/work_list_qr.png"><br/>请扫描二维码，查看更多作品')
+    }
+  })
+</script>
 </html>
