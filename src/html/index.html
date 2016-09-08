@@ -92,7 +92,7 @@
   </div>
 
   <!-- YAOPAI环球旅拍 -->
-  <div class="card-box container">
+  <div class="card-box container work-card-list">
     <header class="card-title">
       <img src="../img/logo_black.png" alt="YAOPAI" /> 环球旅拍
       </br>
@@ -101,9 +101,7 @@
 
     <div class="card-list pure-g">
       <section href="#" class="card long-img pure-u-1 pure-u-md-2-3">
-        <a class="l-box" href="#">
-          <img class="long-img pure-img" src="../img/banner/6.jpg" alt="">
-        </a>
+        <img class="long-img pure-img" src="../img/banner/6.jpg" alt="">
       </section>
 
       <section class="card pure-u-1-2 pure-u-md-1-3">
@@ -161,7 +159,7 @@
 
   <!-- YAOPAI个人写真 -->
   <div class="gray-box">
-    <div class="card-box-2 container">
+    <div class="card-box-2 container work-card-list">
       <header class="card-title">
         <img src="../img/logo_black.png" alt="YAOPAI" /> 个人写真
         </br>
@@ -170,9 +168,7 @@
 
       <div class="card-list pure-g clearfix">
         <section href="#" class="card long-img pure-u-1 pure-u-md-2-3">
-          <a class="l-box" href="#">
-            <img class="long-img pure-img" src="../img/banner/7.jpg" alt="">
-          </a>
+          <img class="long-img pure-img" src="../img/banner/7.jpg" alt="">
         </section>
 
         <section class="card pure-u-1-2 pure-u-md-1-3">
@@ -337,6 +333,19 @@
   </footer>
 
 </body>
+<!-- html 模板 -->
+<!--  鼠标移到作品封面上，显示摄影师主页二维码和 app下载链接 -->
+<script type="text/html" id="tpl_qr">
+  <div class="qr-box-home hidden-xs" id="qr-box" style="width: 0">
+    <section class="top">
+      <p>微信扫一扫</p>
+      查看我的个人主页<br/>
+      <img src="" alt=""><br/>
+      <a href="https://itunes.apple.com/us/app/yaopai/id1105711466?l=zh&ls=1&mt=8" class="btn">点击我下载 APP<br/>获取更佳体验</a>
+    </section>
+  </div>
+</script>
+
 <script src="../js/jquery.min.js"></script>
 <script src="../js/pic_slide.js"></script>
 <script src="../js/responsiveSlides.js"></script>
@@ -402,6 +411,45 @@
       return { mobile: !!u.match(/AppleWebKit.*Mobile.*/)};
     }(),
     language: (navigator.browserLanguage || navigator.language).toLowerCase()
+  }
+
+
+  /* 摄影师封面 onMouseover 逻辑 */
+  // 填入二维码图片相对路径
+  var qrList = ['../img/work/work-1.png', '../img/work/work-2.png', '../img/work/work-3.png', '../img/work/work-4.png',
+                   '../img/work/work-5.png', '../img/work/work-6.png', '../img/work/work-7.png', '../img/work/work-8.png', ];
+  var idList = [3653, 4132, 3612, 3095, 3368, 4463, 3750, 1808];
+  setQrList(qrList, idList);
+  function setQrList(list) {
+    $('.work-card-list .l-box').hover(
+      function() {
+        var index = $(this).index('.work-card-list .l-box');
+        var distance = parseInt($(this).innerWidth())
+        $(this).append($('#tpl_qr').html());
+        // 如果是第三个或者第六个元素时
+        var direction = 'left';
+        var $qrBox = $('#qr-box');
+        if(index == 0 || index == 3 || index == 4 || index ==7) {
+          direction = 'right';
+          $qrBox.css({borderLeft: '1px black solid', borderRight: 'none'})
+        }
+        $qrBox
+          .animate({width: '220px'}, 200)
+          .css(direction, distance)
+          .find('img')
+          .attr('src', list[index])
+      },
+      function() {
+        $('#qr-box').remove();
+      }
+    );
+
+    $('#card-list .cover').click(function() {
+      if(!browser.versions.mobile) return; // 如果不是手机点击，直接返回
+
+      var index = $(this).index('#card-list .cover');
+      location.href = 'http://m.aiyaopai.com/#/workDetail/' + idList[index];
+    });
   }
 
   $(".card-footer").click(function() {
