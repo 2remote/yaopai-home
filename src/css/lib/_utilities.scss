@@ -95,6 +95,11 @@ i {
     margin : 0;
   }
 
+  a,
+  a:-webkit-any-link {
+    color: $white;
+  }
+
   .btn-bottom {
     position   : absolute;
     bottom     : 70px;
