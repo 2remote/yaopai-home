@@ -1,10 +1,11 @@
 // poster
 
 #works-home {
-  padding-top    : 240px;
+  padding-top    : 20%;
   @media (max-width: 767px) {
-    padding-top: 200px;
+    padding-top: 42%;
   }
+  text-align: center;
   background     : url('../img/poster_works.png') center no-repeat;
   background-size: cover;
 
@@ -65,7 +66,8 @@
       width: 100%;
     }
     height    : 185px;
-    margin    : 80px auto 0;
+    display: inline-block;
+    margin-top: 50px;
     text-align: center;
     font-size : 0;
     color     : $white;
@@ -77,15 +79,15 @@
 
     .left {
       display     : inline-block;
-      width       : 131px;
+      width       : 130px;
       margin-right: 40px;
       text-align  : center;
       font-size   : 12px;
 
       img {
-        width        : 131px;
-        height       : 131px;
-        margin-bottom: 10px;
+        width        : 130px;
+        height       : 130px;
+        margin-bottom: 5px;
       }
 
       p {
@@ -104,14 +106,14 @@
       vertical-align: top;
 
       .h1 {
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         font-size    : 33px;
       }
 
       .btn {
         display      : inline-block;
         margin-top   : 20px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         background   : #e6c288;
         width        : 175px;
         height       : 50px;
