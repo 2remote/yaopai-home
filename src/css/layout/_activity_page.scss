@@ -1,6 +1,6 @@
 // poster
 #activity-home {
-  background:url('../img/banner/activity.gif') no-repeat;
+  background:url('../img/banner/activity.gif') center center no-repeat;
   background-size: cover;
   color          : $white;
   font-size: 16px;
@@ -71,7 +71,7 @@
 
     .cover {
       height    : 287px;
-      background: $black;
+      background-position: center center;
     }
 
     .info-box {
