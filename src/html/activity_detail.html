@@ -194,7 +194,7 @@
   $(function() {
     // 问题切换逻辑
     $('.btn-a li').click(function() {
-      $('#answere-title').text($('btn-a li').eq(0).text())
+      $('#answere-title').text($('.btn-a li:first').text())
       var index = $(this).index('.btn-a li');
       if(index > 4) index -= 4
       var str = $('#ques-a-' + index).html()
@@ -202,7 +202,7 @@
     })
 
     $('.btn-b li').click(function() {
-      $('#answere-title').text($('btn-b li').eq(0).text())
+      $('#answere-title').text($('.btn-b li:first').text())
       var index = $(this).index('.btn-b li');
       if(index > 4) index -= 4;
       var str = $('#ques-b-' + index).html()
