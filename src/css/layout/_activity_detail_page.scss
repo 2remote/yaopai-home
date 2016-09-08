@@ -29,7 +29,6 @@
 
   .question-title {
     height       : 30px;
-    line-height  : 30px;
     padding-left : 1.5em;
     color        : #777;
     background   : #404040;
@@ -46,16 +45,13 @@
 
   li {
     height: 42px;
-
-    a {
-      display       : block;
-      padding       : .4em 1em;
-      color         : #ccc;
-      padding-top   : .5em;
-      padding-bottom: .5em;
-      box-shadow    : inset 0 1px 0 rgba(255,255,255,.05);
-      border-top    : 1px solid rgba(0,0,0,.3);
-    }
+    display       : block;
+    padding       : .4em 1em;
+    color         : #ccc;
+    padding-top   : .5em;
+    padding-bottom: .5em;
+    box-shadow    : inset 0 1px 0 rgba(255,255,255,.05);
+    border-top    : 1px solid rgba(0,0,0,.3);
   }
 }
 
@@ -124,20 +120,14 @@
     width      : 100%;
     height     : 30px;
     line-height: 30px;
+    padding-left: 26px;
+
+    &:hover {
+      background: $gray;
+    }
 
     &:last-child {
       margin-bottom: 20px;
-    }
-
-    a {
-      display     : inline-block;
-      width       : 100%;
-      height      : 30px;
-      padding-left: 26px;
-
-      &:hover {
-        background: $gray;
-      }
     }
   }
 
