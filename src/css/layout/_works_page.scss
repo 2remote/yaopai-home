@@ -1,10 +1,9 @@
 // poster
 
 #works-home {
-  padding-top    : 20%;
-  @media (max-width: 767px) {
-    padding-top: 42%;
-  }
+  @extend %flex;
+  @include flex_align_items(center);
+  @include flex_justify_content(center);
   text-align: center;
   background     : url('../img/poster_works.png') center no-repeat;
   background-size: cover;
@@ -12,6 +11,11 @@
   a,
   a:-webkit-any-link {
     color: $white;
+  }
+
+  .content-box {
+    display: inline-block;
+    margin: 0;
   }
 
   .data-box {
