@@ -194,6 +194,7 @@
   })(this, this.document);
 
   $(function() {
+    $('#answere').html($('#ques-a-1').html());
     // 问题切换逻辑
     $('.btn-a li').click(function() {
       $('#answere-title').text($('.btn-a li:first').text())
