@@ -119,13 +119,12 @@ i {
       height       : 38px;
       line-height  : 38px;
       text-align   : center;
-      border       : 1px solid #ffffff;
+      border       : 1px solid $gold;
       border-radius: 100px;
       font-size    : 16px;
 
       &:hover {
-        border-color: $black;
-        background  : $black;
+        border-color: $white;
       }
     }
   }
