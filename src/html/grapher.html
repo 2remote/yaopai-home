@@ -38,10 +38,13 @@
 
     <!-- 全屏海报 -->
     <div class="poster" id="grapher-home" style="background:url('../img/banner/6.gif') no-repeat; background-size:cover">
-      <p class="h1">每一张照片，都是时光的标本。</p>
-      <br/>为你记录最美的瞬间
-      <br/>
-      <a href="http://p.aiyaopai.com" class="btn">我要认证</a>
+      <section class="content-box container">
+        <p class="h1">每一张照片，都是时光的标本。</p>
+        <br/>为你记录最美的瞬间
+      </section>
+      <div class="btn-bottom">
+        <a href="http://p.aiyaopai.com">我要认证</a>
+      </div>
     </div>
 
     <!-- 活动图片 -->
@@ -187,7 +190,7 @@
 <!-- html 模板 -->
 <!--  鼠标移到摄影师封面上，显示摄影师主页二维码和 app下载链接 -->
 <script type="text/html" id="tpl_qr">
-  <div class="qr-box hidden-xs" id="qr-box">
+  <div class="qr-box hidden-xs" id="qr-box" style="width: 0">
     <section class="top">
       <p>微信扫一扫</p>
       查看我的个人主页<br/>
@@ -227,7 +230,8 @@
 
     /* 摄影师封面 onMouseover 逻辑 */
     // 填入二维码图片相对路径
-    var qrList = ['../img/grapher/list/c1.png', '../img/grapher/list/c2.png', '../img/grapher/list/c3.png', '../img/grapher/list/c4.png', '../img/grapher/list/c5.png', '../img/grapher/list/c6.png'];
+    var qrList = ['../img/grapher/list/c1.png', '../img/grapher/list/c2.png', '../img/grapher/list/c3.png',
+                    '../img/grapher/list/c4.png', '../img/grapher/list/c5.png', '../img/grapher/list/c6.png'];
 
     setQrList(qrList);
     function setQrList(list) {
@@ -237,14 +241,15 @@
           var distance = parseInt($(this).innerWidth())
           $(this).append($('#tpl_qr').html());
           // 如果是第三个或者第六个元素时
+          var direction = 'left';
           if((index + 1) % 3  == 0) {
-            distance = '-' + parseInt($('#qr-box').innerWidth());
+            direction = 'right';
           }
           $('#qr-box')
-            .css('left', distance + 'px')
+            .animate({width: '250px'}, 200)
+            .css(direction, distance)
             .find('img')
             .attr('src', list[index])
-            .end()
         },
         function() {
           $('#qr-box').remove();

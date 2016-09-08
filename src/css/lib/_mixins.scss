@@ -1,3 +1,79 @@
+%flex {
+  display: -o-box;
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/// align-items 的兼容性方法
+///
+/// @group 布局
+/// @name flex_align_items
+/// @param {String} $value - 对齐方式，有 flex-start，flex-end，center，baseline，stretch 5个可选值
+@mixin flex_align_items($value) {
+  @if $value == 'flex-start' {
+    -webkit-box-align: start;
+    -moz-box-align   : start;
+    -o-box-align     : start;
+    -ms-box-align    : start;
+  }
+
+  @else if $value == 'flex-end' {
+    -webkit-box-align: end;
+    -moz-box-align   : end;
+    -o-box-align     : end;
+    -ms-box-align    : end;
+  }
+  @else {
+    -webkit-box-align: $value;
+    -moz-box-align   : $value;
+    -o-box-align     : $value;
+    -ms-box-align    : $value;
+  }
+  -webkit-align-items: $value;
+  -moz-align-items   : $value;
+  -o-align-items     : $value;
+  -ms-align-items    : $value;
+  -ms-flex-align     : $value; // for IE10
+  align-items        : $value;
+}
+
+/// justify-content 的兼容性方法
+///
+/// @group 布局
+/// @name flex_justify_content
+/// @param {String} $value - CSS 属性 justify-content 的属性值，即 flex-start，flex-end，center，space-between，space-around 5个可选值
+@mixin flex_justify_content($value) {
+  @if $value == 'space-around' {
+    -webkit-box-pack: justify;
+    -moz-box-pack   : justify;
+    -ms-flex-pack   : distribute;
+  }
+
+  @else if $value == 'flex-start' {
+    -webkit-box-pack: start;
+    -moz-box-pack   : start;
+    -ms-flex-pack   : start;
+  }
+
+  @else if $value == 'flex-end' {
+    -webkit-box-pack: end;
+    -moz-box-pack   : end;
+    -ms-flex-pack   : end;
+  }
+  @else {
+    -webkit-box-pack: $value;
+    -moz-box-pack   : $value;
+    -ms-flex-pack   : $value;
+  }
+  -webkit-justify-content: $value;
+  -ms-justify-content    : $value;
+  -ms-flex-pack          : $value; // for IE10
+  justify-content        : $value;
+}
 
 // Responsive utilities
 
@@ -8,10 +84,19 @@
   #{$parent} {
     display: block !important;
   }
-  table#{$parent}  { display: table !important; }
-  tr#{$parent}     { display: table-row !important; }
-  th#{$parent},
-  td#{$parent}     { display: table-cell !important; }
+
+  table#{$parent} {
+    display: table !important;
+  }
+
+  tr#{$parent} {
+    display: table-row !important;
+  }
+
+  td#{$parent},
+  th#{$parent} {
+    display: table-cell !important;
+  }
 }
 
 // [converter] $parent hack
@@ -43,23 +128,23 @@
   transition                 : transform .2s, -webkit-transform .2s ease-in-out;
 
   @if $direction == 'left-right' {
-    -webkit-transform          : translate(-100%, 0);
-    transform                  : translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+    transform        : translate(-100%, 0);
   }
 
   @if $direction == 'right-left' {
-    -webkit-transform          : translate(100%, 0);
-    transform                  : translate(100%, 0);
+    -webkit-transform: translate(100%, 0);
+    transform        : translate(100%, 0);
   }
 
   @if $direction == 'top-bottom' {
-    -webkit-transform          : translate(0, -100%);
-    transform                  : translate(0, -100%);
+    -webkit-transform: translate(0, -100%);
+    transform        : translate(0, -100%);
   }
 
   @if $direction == 'bottom-top' {
-    -webkit-transform          : translate(0, 100%);
-    transform                  : translate(0, 100%);
+    -webkit-transform: translate(0, 100%);
+    transform        : translate(0, 100%);
   }
 }
 /* 一个公共类放在这是不规范的，但是放在这更合适 */
