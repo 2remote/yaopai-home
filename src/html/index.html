@@ -105,7 +105,7 @@
       </section>
 
       <section class="card pure-u-1-2 pure-u-md-1-3">
-        <a class="l-box" href="#">
+        <a class="l-box" href="javascript:(0)">
           <img class="card-img" src="../img/pics/1.png" />
           <p class="card-subtitle">[东京]婚纱拍摄之夏日镰仓</p>
           <p class="card-text">
@@ -117,7 +117,7 @@
       </section>
 
       <section class="card pure-u-1-2 pure-u-md-1-3">
-        <a class="l-box" href="#">
+        <a class="l-box" href="javascript:(0)">
           <img class="card-img" src="../img/pics/2.png" />
           <p class="card-subtitle">[巴黎、伦敦]欧洲旅拍</p>
           <p class="card-text">
@@ -129,7 +129,7 @@
       </section>
 
       <section class="card pure-u-1-2 pure-u-md-1-3">
-        <a class="l-box" href="#">
+        <a class="l-box" href="javascript:(0)">
           <img class="card-img" src="../img/pics/3.png" />
           <p class="card-subtitle">[新加坡]情绪</p>
           <p class="card-text">
@@ -141,7 +141,7 @@
       </section>
 
       <section class="card pure-u-1-2 pure-u-md-1-3">
-        <a class="l-box" href="#">
+        <a class="l-box" href="javascript:(0)">
           <img class="card-img" src="../img/pics/4.png" />
           <p class="card-subtitle">[曼谷]青与凋零</p>
           <p class="card-text">
@@ -172,7 +172,7 @@
         </section>
 
         <section class="card pure-u-1-2 pure-u-md-1-3">
-          <a class="l-box" href="#">
+          <a class="l-box" href="javascript:(0)">
             <img class="card-img" src="../img/pics/5.png" />
             <p class="card-subtitle">[上海]cosplay
               <青蛇>
@@ -186,7 +186,7 @@
         </section>
 
         <section class="card pure-u-1-2 pure-u-md-1-3">
-          <a class="l-box" href="#">
+          <a class="l-box" href="javascript:(0)">
             <img class="card-img" src="../img/pics/6.png" />
             <p class="card-subtitle">[乌鲁木齐]街拍范儿</p>
             <p class="card-text">
@@ -198,7 +198,7 @@
         </section>
 
         <section class="card pure-u-1-2 pure-u-md-1-3">
-          <a class="l-box" href="#">
+          <a class="l-box" href="javascript:(0)">
             <img class="card-img" src="../img/pics/7.png" />
             <p class="card-subtitle">[深圳]浮生辞</p>
             <p class="card-text">
@@ -210,7 +210,7 @@
         </section>
 
         <section class="card pure-u-1-2 pure-u-md-1-3">
-          <a class="l-box" href="#">
+          <a class="l-box" href="javascript:(0)">
             <img class="card-img" src="../img/pics/8.png" />
             <p class="card-subtitle">[北京]春风十里</p>
             <p class="card-text">
@@ -444,10 +444,9 @@
       }
     );
 
-    $('#card-list .cover').click(function() {
+    $('.work-card-list .l-box').click(function() {
       if(!browser.versions.mobile) return; // 如果不是手机点击，直接返回
-
-      var index = $(this).index('#card-list .cover');
+      var index = $(this).index('.work-card-list .l-box');
       location.href = 'http://m.aiyaopai.com/#/workDetail/' + idList[index];
     });
   }
