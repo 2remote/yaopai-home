@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="apple-mobile-web-app-capable" content="no">
+  <meta name="format-detection" content="telephone=no">
+  <title>YAOPAI</title>
+  <link rel="stylesheet" href="../css/style-index.css">
+</head>
+
+<body>
+  <article id="body">
+    <!-- 导航 -->
+    <header id="header" class="container custom-menu-wrapper">
+      <div class="pure-menu custom-menu custom-menu-top">
+        <a href="index.html" class="logo custom-menu-brand">
+          <img src="../img/logo.png" alt="LOGO">
+          <small class="small">全球预约摄影师平台</small>
+        </a>
+        <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+      </div>
+      <nav class="pure-menu fr pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+        <div class="custom-menu-screen"></div>
+        <ul class="pure-menu-list">
+          <li><a href="index.html" class="pure-menu-link">首页</a></li>
+          <li><a href="#" class="pure-menu-link nav-active">客片</a></li>
+          <li><a href="grapher.html" class="pure-menu-link">摄影师</a></li>
+          <li><a href="activity.html" class="pure-menu-link">活动</a></li>
+          <li><a href="firm.html" class="pure-menu-link">企业</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 全屏海报 -->
+    <div class="poster" id="works-home">
+      <section class="content-box container">
+        <div class="data-box">
+          <div class="left">
+            <section>10,000+
+              <p>摄影师作品</p>
+            </section>
+          </div>
+          <div class="center">
+            <section>72
+              <p>套系风格</p>
+            </section>
+          </div>
+          <div class="right">
+            <section>100+
+              <p>全球可服务城市</p>
+            </section>
+          </div>
+        </div>
+
+        <div class="download">
+          <div class="left hidden-xs">
+            <img src="../img/qr_large.png" alt="二维码">
+            <p>微信扫一扫</p>
+            手机上挑客片
+          </div>
+          <div class="right">
+            <p class="h1">下载APP获得最佳体验</p>
+            极致体验 2.0 全新版
+            <br><a class="btn" href="https://itunes.apple.com/us/app/yaopai/id1105711466?l=zh&ls=1&mt=8">iPhone 版下载</a>
+            <br><span>或苹果商店搜索 YAOPAI</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn-bottom">
+        <a href="http://p.aiyaopai.com">我也要发布自己的作品</a>
+      </div>
+    </div>
+
+    <!-- 预约流程 -->
+    <img class="icon-list pure-img" src="../img/icon_list.png" alt="">
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="QR-box">
+        <div class="fl"><img src="../img/qr.png" alt=""></div>
+        <div class="fr">
+          <img src="../img/logo_black.png" alt="">
+          <br>全球预约摄影师平台
+        </div>
+      </div>
+
+      <p>
+        <a href="activity_detail.html">关于我们</a> &nbsp;&nbsp;/&nbsp;&nbsp;
+        <a href="activity_detail.html">拍摄流程</a> &nbsp;&nbsp;/&nbsp;&nbsp;
+        <a href="activity_detail.html">常见问题</a> &nbsp;&nbsp;/&nbsp;&nbsp;
+        <a href="http://p.aiyaopai.com/">摄影师入住</a>
+      </p>
+
+      <aside>客服电话：<span>400-22223333</span>（工作日上午：9:00 - 12:00）</aside>
+    </footer>
+  </article>
+
+</body>
+<script src="../js/jquery.min.js"></script>
+<script>
+  // 导航
+  (function(window, document) {
+    document.getElementById('toggle').addEventListener('click', function(e) {
+      document.getElementById('tuckedMenu').classList.toggle('custom-menu-tucked');
+      document.getElementById('toggle').classList.toggle('x');
+    });
+  })(this, this.document);
+
+  $(function() {
+    function setHeight() {
+      // 由于对 #poster 进行了绝对定位，故需要计算位于其下面元素的 marginTop
+      var navHeight = $('#header').height();
+      var winHeight = $(window).height() - navHeight + 20 + 'px';
+      $('.icon-list').css({
+        marginTop: winHeight
+      });
+    }
+
+    setHeight();
+    $(window).resize(setHeight);
+
+    //TODO body 的高度需要强制调节下，暂时未找到问题
+    bodyHeight = $('#body').height();
+    $('body').css('height', bodyHeight);
+  });
+</script>
+
+</html>

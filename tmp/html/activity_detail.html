@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="apple-mobile-web-app-capable" content="no">
+  <meta name="format-detection" content="telephone=no">
+  <title>YAOPAI</title>
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1468975937_683718.css">
+  <link rel="stylesheet" href="../css/style-index.css">
+</head>
+
+<body>
+  <article id="body">
+    <div id="nav-bar" style="background: #000">
+      <header id="header" class="container custom-menu-wrapper">
+        <div class="pure-menu custom-menu custom-menu-top">
+          <a href="index.html" class="logo custom-menu-brand">
+            <img src="../img/logo.png" alt="LOGO">
+            <small class="small">全球预约摄影师平台</small>
+          </a>
+          <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+        </div>
+        <nav class="pure-menu fr pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+          <div class="custom-menu-screen"></div>
+          <ul class="pure-menu-list">
+            <li><a href="index.html" class="pure-menu-link">首页</a></li>
+            <li><a href="works.html" class="pure-menu-link">客片</a></li>
+            <li><a href="grapher.html" class="pure-menu-link">摄影师</a></li>
+            <li><a href="activity.html" class="pure-menu-link">活动</a></li>
+            <li><a href="firm.html" class="pure-menu-link">企业</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <!-- 小海报 -->
+    <div id="banner"></div>
+
+    <div class="question-box container pure-g">
+      <!-- 黑色蒙版 -->
+      <div id="mask" class="mask-transition"></div>
+      <!-- 汉堡按钮 -->
+      <a class="menu-toggle visible-xs" id="menu-toggle" herf="javascript:void(0)">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <!-- menu -->
+      <section id="menu" class="responsive-slides visible-xs">
+        <ul class="btn-a">
+          <li class="question-title">常见问题</li>
+          <li>常见问题</li>
+          <li>关于我们</li>
+          <li>商务合作</li>
+          <li>拍摄流程</li>
+        </ul>
+
+        <ul class="btn-b">
+          <li class="question-title">不常见问题</li>
+          <li>不常见问题一</li>
+          <li>不常见问题二</li>
+          <li>不常见问题三</li>
+          <li>不常见问题四</li>
+        </ul>
+      </section>
+      <!-- 问题一定要和上面的同步 -->
+      <section class="question-list pure-u-1 pure-u-md-1-4 hidden-xs">
+        <p class="question-title">常见问题</p>
+        <ul class="btn-a">
+          <li>常见问题</li>
+          <li>关于我们</li>
+          <li>商务合作</li>
+          <li>拍摄流程</li>
+        </ul>
+        <p class="question-title">不常见问题</p>
+        <ul class="btn-b">
+          <li>不常见问题一</li>
+          <li>不常见问题二</li>
+          <li>不常见问题三</li>
+          <li>不常见问题四</li>
+        </ul>
+      </section>
+      <section class="answere-list pure-u-1 pure-u-md-3-4" id="answere-list-a">
+        <p class="answere-title" id="answere-title">常见问题</p>
+        <!-- 问题请在下面的 script 标签里填充 -->
+        <div class="answere" id="answere"></div>
+      </section>
+    </div>
+
+    <!-- 预约流程 -->
+    <img class="icon-list pure-img" src="../img/icon_list.png" alt="">
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="QR-box">
+        <div class="fl"><img src="../img/qr.png" alt=""></div>
+        <div class="fr">
+          <img src="../img/logo_black.png" alt="">
+          <br>全球预约摄影师平台
+        </div>
+      </div>
+
+      <p>
+        <a href="activity_detail.html">关于我们</a> &nbsp;&nbsp;/&nbsp;&nbsp;
+        <a href="activity_detail.html">拍摄流程</a> &nbsp;&nbsp;/&nbsp;&nbsp;
+        <a href="activity_detail.html">常见问题</a> &nbsp;&nbsp;/&nbsp;&nbsp;
+        <a href="http://p.aiyaopai.com/">摄影师入住</a>
+      </p>
+
+      <aside>客服电话：<span>400-22223333</span>（工作日上午：9:00 - 12:00）</aside>
+    </footer>
+  </article>
+
+  <!-- 问题依次写在这里 -->
+  <!-- 第一组问题 ，问题一-->
+  <script type="text/html" id="ques-a-1">
+    <h4 class="subtitle">1.如何使用YAOPAI 预约拍摄？</h4> 在APP 里的登录YAOPAI 账号，选择喜欢的套餐，完善订单详情并下单预约即可；
+    <br/><br/>
+    <h4 class="subtitle">2.如何知道我预约的时间能不能拍摄？</h4> 在预约下单前跟摄影师沟通确认可以拍摄的时间；
+    <br/><br/>
+    <h4 class="subtitle">3.我是否需要自备服装和化妆？</h4> 套餐详情里会有是否提供服装和化妆的说明；您也可以在和摄影师确认拍摄详情时，根据您的需求沟通服装和化妆的情况；
+    <br/><br/>
+    <h4 class="subtitle">4.如何付款？</h4> 目前平台支持微信和支付宝两种付款方式；
+    <br/><br/>
+    <h4 class="subtitle">5.付款后和摄影师沟通出现问题怎么办？</h4> 可以和客服联系，协助处理，帮您安排满足您要求的摄影师；
+    <br/><br/>
+    <h4 class="subtitle">6.因为个人原因需要取消订单怎么办？</h4> 依照平台交易保护政策，根据实际情况进行处理；
+    <br/><br/>
+    <h4 class="subtitle">7.我多长时间可以收到精修的照片？</h4> 您在拍摄后挑选需要精修的照片，并在双方约定的时间内拿到摄影师精修好的照片；
+  </script>
+
+  <!-- 问题 2 -->
+  <script type="text/html" id="ques-a-2">
+    <h4 class="subtitle">公司介绍：</h4> 北京邀拍传媒科技有限公司，成立于2015年，注册资金2000万。用户可以随时随地地通过YAOPAI 微信公众平台，手机端网站， YAOPAI APP快速找到最适合你的那位摄影师。目前YAOPAI 已经建立北京、上海、杭州、武汉、成都、郑州等六大城市站的摄 影师新媒体社群；有1000+的摄影师入驻YAOPAI，YAOPAI将要建立上百个城市的摄影新媒体矩阵。 YAOPAI 团队立足于移动互 联网，专注于新媒体传播、深度剖析摄影师需求和用户体验，为摄影师实现真正的价值。为想要拍照的你，找到最合适的摄影师。
+    <br/><br/>
+    <h4 class="subtitle">产品介绍：</h4> YAOPAI 不仅仅是一个全球预约摄影师平台，也是全宇宙最走心的摄影师O2O新媒体平台。
+    <br/><br/>
+    1. 针对B端市场，我们挖掘其商业价值：YAOPAI 云摄影、企业家形象照、企业摄影课程培训以及大学生市场、毕业季专场。
+    <br/><br/>
+    2. C端市场是针对于YAOPAI的用户，微信公众号订阅粉丝。
+  </script>
+
+  <!-- 问题3 -->
+  <script type="text/html" id="ques-a-3">
+    <h4 class="subtitle">国际摄影节展：</h4>
+     1.YAOPAI被指定为“中国国际摄影艺术节唯一指定摄影APP”
+    <br/><br/>
+    2.YAOPAI-CAFE是中国国际摄影艺术节唯一咖啡供应商。
+    <br/><br/>
+    <h4 class="subtitle">万象城《见“郑”100位摄影师的力量》主题摄影展：</h4>
+    1.YAOPAI的100位摄影师的优秀作品展览，作品分布万象城1-6楼。
+    <br/><br/>
+    2.“郑Cool”街拍计划在此启动。
+  </script>
+
+  <!-- 问题四 -->
+  <script type="text/html" id="ques-a-4">
+    拍摄流程
+  </script>
+
+  <!-- 第二组问题 -->
+  <script type="text/html" id="ques-b-1">
+    <h4>第二组问题，问题一</h4>
+  </script>
+
+  <script type="text/html" id="ques-b-2">
+    <h4>第二组问题，问题二</h4>
+  </script>
+
+  <script type="text/html" id="ques-b-3">
+    <h4>第二组问题，问题三</h4>
+  </script>
+
+  <script type="text/html" id="ques-b-4">
+    <h4>第二组问题，问题四</h4>
+  </script>
+
+
+</body>
+<script src="../js/jquery.min.js"></script>
+<script>
+  // 导航
+  (function(window, document) {
+    document.getElementById('toggle').addEventListener('click', function(e) {
+      console.log(1234)
+      document.getElementById('tuckedMenu').classList.toggle('custom-menu-tucked');
+      document.getElementById('toggle').classList.toggle('x');
+    });
+  })(this, this.document);
+
+  $(function() {
+    $('#answere').html($('#ques-a-1').html());
+    // 问题切换逻辑
+    $('.btn-a li').click(function() {
+      $('#answere-title').text($('.btn-a li:first').text())
+      var index = $(this).index('.btn-a li');
+      if(index > 4) index -= 4
+      var str = $('#ques-a-' + index).html()
+      $('#answere').html(str);
+    })
+
+    $('.btn-b li').click(function() {
+      $('#answere-title').text($('.btn-b li:first').text())
+      var index = $(this).index('.btn-b li');
+      if(index > 4) index -= 4;
+      var str = $('#ques-b-' + index).html()
+      $('#answere').html(str);
+    })
+
+    // 计算高度
+    bodyHeight = $('#body').height();
+    $('body').css('height', bodyHeight);
+
+    // toggle 方法
+    $.fn.toggle = function(fn, fn2) {
+      var args = arguments,
+        guid = fn.guid || $.guid++,
+        i = 0,
+        toggle = function(event) {
+          var lastToggle = ($._data(this, "lastToggle" + fn.guid) || 0) % i;
+          $._data(this, "lastToggle" + fn.guid, lastToggle + 1);
+          event.preventDefault();
+          return args[lastToggle].apply(this, arguments) || false;
+        };
+      toggle.guid = guid;
+      while (i < args.length) {
+        args[i++].guid = guid;
+      }
+      return this.click(toggle);
+    };
+
+    //菜单滑动
+    function showMenu() {
+      $('#mask').show().addClass('fade-toggle');
+      $('#menu').addClass('slide-toggle');
+    }
+
+    function hideMenu() {
+      $('#mask').hide().removeClass('fade-toggle');
+      $('#menu').removeClass('slide-toggle');
+    }
+
+    $('#menu-toggle').toggle(showMenu, hideMenu);
+    $('#menu-toggle').click(function() {
+      $(this).children('.icon-bar').toggleClass('icon-bar-rotate')
+    })
+    $('#mask, #menu').click(hideMenu);
+  });
+</script>
+
+</html>
